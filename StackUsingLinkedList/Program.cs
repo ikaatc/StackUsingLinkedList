@@ -32,7 +32,7 @@ namespace StackUsingLinkedList
             else
                 return true;
         }
-        
+
         public void push(int element)
         {
             Node fresh;
@@ -41,6 +41,11 @@ namespace StackUsingLinkedList
             fresh.next = top;
             top = fresh;
             Console.WriteLine("\n" + element + " pushed.");
+        }
+        public void pop()
+        {
+            Console.WriteLine("\nThe popped element is:" + top.info);
+            top = top.next; //Make top point to the next node in sequence
         }
     }
     internal class Program
